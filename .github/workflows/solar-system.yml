@@ -81,7 +81,7 @@ jobs:
 
     permissions: 
       packages: write
-      deployments: write
+      contents: read
 
     steps:
       - name: Checkout Repository
