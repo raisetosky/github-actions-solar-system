@@ -94,4 +94,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tag: ${{ github.repository_owner }}/solar-system:${{ github.sha }}
+          tags: ${{ github.repository_owner }}/solar-system:${{ github.sha }}
