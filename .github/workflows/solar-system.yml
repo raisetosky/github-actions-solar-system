@@ -81,7 +81,8 @@ jobs:
 
     permissions: 
       packages: write
-      actions: write
+      deployments: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
