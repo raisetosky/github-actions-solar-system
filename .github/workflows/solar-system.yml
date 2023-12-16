@@ -38,7 +38,6 @@ jobs:
           path: test-results.xml
 
   code-coverage: 
-    name: Code Coverage
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -53,8 +52,8 @@ jobs:
         run: npm install
 
       - name: Code Coverage
-        run: npm run coverage
         continue-on-error: true
+        run: npm run coverage
 
       - name: Upload Coverage
         uses: actions/upload-artifact@v3
