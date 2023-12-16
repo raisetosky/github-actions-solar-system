@@ -45,7 +45,7 @@ jobs:
           name: Mocha-Test-Result
           path: test-results.xml
       - name: list content of node_modules dir
-        run: ls -laR ~
+        run: ls -laR ./
 
   code-coverage: 
     runs-on: ubuntu-latest
