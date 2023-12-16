@@ -27,7 +27,7 @@ jobs:
       - name: Cache NPM dependencies
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node_modules_${{ hashFiles('package-lock.json') }}
   
       - name: Install Dependencies
@@ -58,7 +58,7 @@ jobs:
       - name: Cache NPM dependencies
         uses: actions/cache@v3
         with:
-          path: node_modules
+          path: ~/.npm
           key: ${{ runner.os }}-node_modules_${{ hashFiles('package-lock.json') }}
 
       - name: Install npm Dependencies
