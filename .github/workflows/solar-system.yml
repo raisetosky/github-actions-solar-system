@@ -112,7 +112,6 @@ jobs:
         with:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBECONFIG }}
-          context: development
       - name: Install Kubectl
         uses: azure/setup-kubectl@v3
         with: 
