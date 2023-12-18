@@ -117,4 +117,4 @@ jobs:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBECONFIG }}
       - name: Verify Kubectl Installation
-        run: echo ${{ secrets.KUBECONFIG}}
+        run: kubectl version --short -o yaml
