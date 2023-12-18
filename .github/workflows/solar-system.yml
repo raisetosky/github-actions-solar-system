@@ -105,20 +105,16 @@ jobs:
     needs: docker
     environment: 
       name: development
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
       - name: Install Kubectl
         uses: azure/setup-kubectl@v3
         with: 
           version: 'v1.26.0'
-      
       - uses: azure/k8s-set-context@v3
         with:
           method: kubeconfig
           kubeconfig: ${{ secrets.KUBECONFIG }}
-      
       - name: Verify Kubectl Installation
-        run: kubectl version --short -o yaml
+        run: echo ${{ secrets.KUBECONFIG}}
