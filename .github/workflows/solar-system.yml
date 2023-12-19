@@ -136,4 +136,11 @@ jobs:
       - name: Check files with replaced placeholders
         run: cat kubernetes/development/*.yaml
         
-        
+  integration-testing:
+    runs-on: ubutu-latest
+    needs: dev-deploy
+    steps:
+      - name: Integration Testing
+        uses: .github/workflows/reusable-workflow.yml
+        with:
+          ingress-url: ${{ needs.dev-deploy.outputs.APP_INGRESS_URL}} 
