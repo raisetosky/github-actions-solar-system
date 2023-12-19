@@ -6,8 +6,6 @@ on:
         description: Provide the Ingress URL
         required: true
         type: string
-
-
 jobs:
   integration-test:
     runs-on: ubuntu-latest
